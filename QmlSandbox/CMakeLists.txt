@@ -10,7 +10,7 @@ if (NOT DEFINED ENV{EMSDK})
     message (FATAL_ERROR "EMSDK environment variable is not defined. Please install emscripten SDK and set EMSDK environment variable.")
 endif ()
 
-find_package (Qt6 REQUIRED COMPONENTS Quick)
+find_package (Qt6 REQUIRED COMPONENTS Quick Charts)
 
 qt_standard_project_setup(REQUIRES 6.5)
 
@@ -30,4 +30,4 @@ qt_add_qml_module (QtWasmTemplate
     VERSION 1.0
     QML_FILES Main.qml)
 
-target_link_libraries (QtWasmTemplate PRIVATE Qt6::Quick)
+target_link_libraries (QtWasmTemplate PRIVATE Qt6::Quick Qt6::Charts)

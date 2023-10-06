@@ -40,7 +40,7 @@ class Project:
             print(f'Installing Qt {qt_version} with aqtinstall tool')
             py_env_prefix = f'{self.venv_root}/bin/python -m '
             output_dir = f'--outputdir {self.qt_root}'
-            modules = '--modules qtimageformats qt5compat qtshadertools'
+            modules = '--modules qtimageformats qt5compat qtshadertools qtcharts'
             archives = '--archives qttranslations qttools qtsvg qtdeclarative qtbase icu'
             run(f'{py_env_prefix} aqt install-qt linux desktop {qt_version} wasm_singlethread {output_dir} {modules} {archives} --autodesktop')
         else:

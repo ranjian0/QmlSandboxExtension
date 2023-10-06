@@ -36,7 +36,7 @@ jobs:
         aqtversion: ${{ env.AQT_VERSION }}
         version: ${{ env.QT_VERSION }}
         dir: ${{ github.workspace }}/lib
-        modules: 'qtimageformats qt5compat qtshadertools'
+        modules: 'qtimageformats qt5compat qtshadertools qtcharts'
         archives: 'qttranslations qttools qtsvg qtdeclarative qtbase icu'
         cache: true
         arch: wasm_singlethread
